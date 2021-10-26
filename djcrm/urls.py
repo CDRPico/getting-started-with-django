@@ -11,10 +11,12 @@ from django.contrib.auth.views import (
 )
 from django.urls import path, include
 from leads.views import landing_page, LandingPageView, SignupView, DashboardView
+from graphene_django.views import GraphQLView
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('graphql/', GraphQLView.as_view(graphiql=True)),
     path('', LandingPageView.as_view(), name='landing-page'),
     path('dashboard/', DashboardView.as_view(), name='dashboard'),
     path('leads/',  include('leads.urls', namespace="leads")),

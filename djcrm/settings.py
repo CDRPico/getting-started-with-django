@@ -1,5 +1,6 @@
 from pathlib import Path
 import environ
+import os
 
 env = environ.Env(
     DEBUG=(bool, False)
@@ -37,6 +38,9 @@ INSTALLED_APPS = [
     # Local apps
     'leads',
     'agents',
+
+    #graphql
+    "graphene_django",
 ]
 
 MIDDLEWARE = [
@@ -178,3 +182,7 @@ LOGGING = {
 }
 
 TAILWIND_APP_NAME = 'theme'
+
+GRAPHENE = {
+    'SCHEMA': 'Django_CRM.schema.schema'
+}
