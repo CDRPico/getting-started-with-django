@@ -184,5 +184,5 @@ LOGGING = {
 TAILWIND_APP_NAME = 'theme'
 
 GRAPHENE = {
-    'SCHEMA': 'Django_CRM.schema.schema'
+    'SCHEMA': 'schema.schema.schema'
 }
