@@ -156,3 +156,6 @@ media_root
 **/.history
 
 # End of https://www.gitignore.io/api/visualstudiocode
+
+# ignore specific files
+branches_doing.txt
