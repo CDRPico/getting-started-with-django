@@ -6,6 +6,16 @@ from leads.models import Lead as LeadModel
 class Lead(DjangoObjectType):
     class Meta:
         model = LeadModel
+        fields = (
+            "first_name",
+            "last_name",
+            "age",
+            "organisation",
+            "agent",
+        )
+
+# class LeadType(graphene.ObjectType):
+#     leads = graphene.List(Lead)
 
 class Query(graphene.ObjectType):
     leads = graphene.List(Lead)
